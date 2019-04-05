@@ -11,3 +11,4 @@ The provided IP of a12-bit SAR ADC is presented by both cdl netlist and the pdf 
 
 The testbench for top level is provided, which uses ADE and Spectre. The setup for ADE is provided in the “Simulation Setup and Results.rst”. The hierarchical schematics are listed in Table 1.
 
+.. image :: ./table1.png
