@@ -7,8 +7,6 @@ A 12-bit Segmented SAR ADC in TSMC 65nm LP CMOS
 The cell view of the circuit to be tested is called 12b_ADC_TOP. Its schematic is printed out in the schematic file <https://github.com/uwrail/UW-RAIL/blob/master/AMS/AMS_KGD/ADC/SAR_ADC/tsmcN65/UW_65nm_SARADC_Apr_2019/UW_12b_SARADC_Hierarchical_Schematics_pdf/ADC_Layout_12b_ADC_Top_schematic.pdf> in the file folder UW_12b_SARADC_Hierarchical_Schematics_pdf. Its symbol is shown in Figure 1. 
 
 .. image :: images/image001.png
-     :align: center
-     :width: 400
 Figure1. The symbol of the 12b_ADC_TOP. 
 
 The pin definition is
@@ -26,19 +24,25 @@ The pin definition is
 
 2.	Power consumption and Dynamic Performance Simulation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2.1.	 Pre-layout simulation
+**2.1. Pre-layout simulation**
 
 The testbench to test ADC power consumption and dynamic performance is “tb_ADC_single” shown in Figure 2. The ADE transient simulation setup is shown in Figure 3. The power consumption of analog, digital and reference are tested separately, their average currents are 9.9uA, 71.3uA, and 18.77uA, respectively. The dynamic performance is calculated in Figure 4. 
 
 .. image :: images/image003.png
-     :align: center
 
 Figure 2. The testbench for the ADC power consumption and dynamic performance.
 
 .. image :: images/image005.png
-     :align: center
 
 Figure 3. The ADE setup for the testbench in Figure 2.
 
+.. image :: images/image007.png
 
+Figure 4. The dynamic performance of the ADC in pre-layout simulation.
 
+**2.2. Post-layout simulation**
+The testbench for the post-layout simulation is the same as the pre-layout simulation shown in Figure 2. But with the cell 12b_ADC uses parasitic extraction netlist in calibre view. The simulated analog current I_A=19.52 uA, digital current I_D=146uA and the reference current is I_Ref=24.36uA. The dynamic performance is shown in Figure 5.
+
+.. image :: images/image0015.png
+
+Figure 5. The dynamic performance of the ADC in post-layout simulation.
