@@ -9,9 +9,9 @@ The cell view of the circuit to be tested is called 12b_ADC_TOP. Its schematic i
 .. image :: images/image001.png
      :align: center
      :width: 400
-Figure1. The symbol of the 12b_ADC_TOP 
+Figure1. The symbol of the 12b_ADC_TOP. 
 
- The pin definition is
+The pin definition is
 - VIP, VIN: differential input pins to the ADC
 - AVDD, AVSS: analog power supply and ground pins
 - DVDD, DVSS: digital power supply and ground pins
@@ -29,4 +29,16 @@ Figure1. The symbol of the 12b_ADC_TOP
 2.1.	 Pre-layout simulation
 
 The testbench to test ADC power consumption and dynamic performance is “tb_ADC_single” shown in Figure 2. The ADE transient simulation setup is shown in Figure 3. The power consumption of analog, digital and reference are tested separately, their average currents are 9.9uA, 71.3uA, and 18.77uA, respectively. The dynamic performance is calculated in Figure 4. 
+
+.. image :: images/image003.png
+     :align: center
+
+Figure 2. The testbench for the ADC power consumption and dynamic performance.
+
+.. image :: images/image005.png
+     :align: center
+
+Figure 3. The ADE setup for the testbench in Figure 2.
+
+
 
